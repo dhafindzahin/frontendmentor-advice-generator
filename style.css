@@ -1,0 +1,131 @@
+/*
+	1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+	2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+	Typographic tweaks!
+	3. Add accessible line-height
+	4. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+	5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+	6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+	7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+	8. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+:root {
+	--primary-color: hsl(193, 38%, 86%);
+	--secondary-color: hsl(150, 100%, 66%);
+	--s: hsl(217, 19%, 38%);
+	--card-color: hsl(217, 19%, 24%);
+	--background-color: hsl(218, 23%, 16%);
+}
+
+.wrapper {
+	background-color: var(--background-color);
+	min-height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 1rem;
+}
+
+.card {
+	background-color: var(--card-color);
+	padding: 2rem;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 16px;
+	position: relative;
+	max-width: 480px;
+}
+
+.card-header {
+	color: var(--secondary-color);
+	font-size: 0.5rem;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1rem;
+}
+
+.card-content {
+	color: var(--primary-color);
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 0.75rem;
+}
+
+.card-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dice {
+	width: max-content;
+	padding: 1em;
+	background-color: var(--secondary-color);
+	border-radius: 100%;
+	position: absolute;
+	bottom: -30px;
+	cursor: pointer;
+}
+
+.dice:hover {
+	box-shadow: 0 0 30px 5px var(--secondary-color);	
+}
+
+@media (min-width: 768px) {
+	.card {
+		padding-bottom: 4rem;
+	}
+}
