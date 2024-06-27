@@ -6,6 +6,7 @@
 
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
 
 		<title>Advice generator app</title>
 	</head>
@@ -13,18 +14,18 @@
 		<main class="wrapper">
 			<div class="card">
 				<div class="card-header">
-					<h1>ADVICE #<span id="advice-id">177</span></h1>
+					<h1>ADVICE #<span id="advice-id"></span></h1>
 				</div>
 				<div class="card-content">
-					<p id="advice-text">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+					<p id="advice-text"></p>
 				</div>
 				<div class="card-footer">
 					<picture>
 						<source media="(min-width:768px)" srcset="images/pattern-divider-desktop.svg" />
 						<img src="images/pattern-divider-mobile.svg" alt="divider" />
 					</picture>
-					<div class="dice">
-						<img  src="images/icon-dice.svg" alt="dices icon" />
+					<div class="dice" id="advice-btn">
+						<img src="images/icon-dice.svg" alt="dices icon" />
 					</div>
 				</div>
 			</div>
